@@ -1,0 +1,29 @@
+<table>
+    <tr class="r"><td class="col-12" style="color: aliceblue;">Audit Management System</td>
+        <td><a [routerLink]="['/home']"class="nav-link">Home</a></td>
+        <td><a [routerLink]="['/questions']" class="nav-link">Questions</a></td>
+        <td><a [routerLink]="['/logout']"class="nav-link">Logout</a></td>
+        
+    </tr>
+</table>
+<div class="body">
+    <h1 style="text-align: center;">Audit Portal Status</h1>
+<div class="row justify-content-center">
+    <div class="col-auto">
+    <table class="table table-bordered Table">
+        <thead class="first">
+            <th scope="col">AuditID</th>
+            <th scope="col">Project Execution Status</th>
+            <th scope="col">Remedial Action Duration</th>
+        </thead>
+        <tbody>
+            <tr [style.background]="projectStatus==true? 'green': 'red'">
+                <td>{{this.auditResponse.auditId}}</td>
+                <td>{{this.auditResponse.projectExecutionStatus}}</td>
+                <td>{{this.auditResponse.remedialActionDuration}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>

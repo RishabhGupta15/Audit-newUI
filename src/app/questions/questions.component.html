@@ -1,0 +1,90 @@
+<table>
+    <tr class="r"><td class="col-12" style="color: aliceblue;">Audit Management System</td>
+        <td><a [routerLink]="['/home']"class="nav-link">Home</a></td>
+        <td><a [routerLink]="['/logout']"class="nav-link">Logout</a></td>
+        
+    </tr>
+</table>
+
+<div class="container">
+    <h1 style="text-align: center;">{{auditType.auditType}} Audit Questions</h1><br><br>
+    <div class="row col-md-12">
+            <br><br><br><br>
+            <table class="table">
+                <thead>
+                    <tr class="firstrow">
+                        <th>Question ID</th>
+                        <th>Question</th>
+                        <th>Response</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>{{questionsData[0].question}}</td>
+                        <td>
+                            <select id="response" name="response" [(ngModel)]="questionsData[0].response" required>
+                              
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                  
+                    <tr>
+                        <td>2</td>
+                        <td>{{questionsData[1].question}}</td>
+                        <td>
+                            <select id="response" name="response" [(ngModel)]="questionsData[1].response" required>
+                               
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>{{questionsData[2].question}}</td>
+                        <td>
+                            <select id="response" name="response" [(ngModel)]="questionsData[2].response" required>
+                               
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>{{questionsData[3].question}}</td>
+                        <td>
+                            <select id="response" name="response" [(ngModel)]="questionsData[3].response" required>
+                                
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>{{questionsData[4].question}}</td>
+                        <td>
+                            <select id="response" name="response" [(ngModel)]="questionsData[4].response" required>
+                               
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <div >
+                <input class="btn btn-success" type="button" name="back" value="Back" [routerLink]="['/home']">
+                &nbsp;&nbsp;
+                <input class="btn btn-success" type="submit" name="submit_reg" value="Submit" (click)="showResponse()">
+            </div>
+           
+            </div>
+            </div>
+            
